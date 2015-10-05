@@ -1,0 +1,32 @@
+{
+  "documentation": "movie reviews. each movie may have 0-n reviews.",
+  "fields": [
+    {
+      "name": "field_movie_id",
+      "type": "Long",
+      "nullable": false,
+      "foreignKey": {
+        "table": "movies",
+        "onDelete": "CASCADE"
+      }
+    },
+    {
+      "documentation": "critic's name",
+      "name": "field_critic_name",
+      "type": "String",
+      "nullable": false
+    },
+    {
+      "documentation": "critic's url",
+      "name": "field_critic_url",
+      "type": "String",
+      "nullable": true
+    },
+    {
+      "documentation": "the movie review",
+      "name": "field_review_text",
+      "type": "String",
+      "nullable": false
+    }
+  ],
+}

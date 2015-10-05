@@ -1,0 +1,26 @@
+{
+  "documentation": "movie trailers. each movie may have 0-n trailers.",
+  "fields": [
+    {
+      "name": "field_movie_id",
+      "type": "Long",
+      "nullable": false,
+      "foreignKey": {
+        "table": "movies",
+        "onDelete": "CASCADE"
+      }
+    },
+    {
+      "documentation": "trailer URL",
+      "name": "field_trailer_url",
+      "type": "String",
+      "nullable": false
+    }
+  ],
+  "constraints": [
+    {
+      "name": "field_trailer_url",
+      "definition": "UNIQUE (field_trailer_url) ON CONFLICT ABORT"
+    }
+  ]
+}

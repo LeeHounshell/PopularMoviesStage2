@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_movie_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".MovieDetailsActivityFragment">
+
+    <TextView
+        android:id="@+id/placeholder1"
+        style="@style/movie_style"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        style="@style/simple_style"
+        android:layout_below="@id/placeholder1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="39dp"
+            android:layout_height="1dp" />
+
+        <TextView
+            android:id="@+id/movie_title"
+            style="@style/detail_title_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="39dp"
+            android:layout_height="1dp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/foating_layout"
+        style="@style/movie_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/favorite_button"
+            style="@style/floating_action_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="top|left"
+            android:src="@drawable/not_favorite_star"
+            app:elevation="5dp"
+            app:fabSize="mini" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/reviews_button"
+            style="@style/floating_action_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="top|right"
+            android:src="@drawable/reviews"
+            app:elevation="5dp"
+            app:fabSize="mini" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/release_date"
+        style="@style/detail_releasedate_style"
+        android:layout_below="@id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:id="@+id/center_rating_bar_layout"
+        style="@style/simple_style"
+        android:layout_below="@id/release_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:orientation="horizontal">
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:numStars="5"
+            android:progressBackgroundTint="@android:color/transparent"
+            android:textColor="@android:color/holo_red_light" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/trailers"
+            style="@style/spinner_style"
+            android:layout_width="105sp"
+            android:layout_height="37sp"
+            android:layout_gravity="end"
+            android:gravity="start"
+            android:popupBackground="#cccccc"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/simple_style"
+        android:layout_below="@id/center_rating_bar_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/plot_synopsis"
+                    style="@style/detail_plot_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:id="@+id/poster_layout"
+                    style="@style/transparent_style"
+                    android:adjustViewBounds="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <View
+                        android:id="@+id/placeholder2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp" />
+
+                    <com.smartvariables.lee.popularmovies.util.NotifyImageView
+                        android:id="@+id/poster_image"
+                        style="@style/poster_image_style"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/placeholder2"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY" />
+
+                    <TextView
+                        android:id="@+id/missing_art"
+                        style="@style/missing_art_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/placeholder2"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <WebView
+                    android:id="@+id/movie_reviews"
+                    style="@style/webview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <at.grabner.circleprogress.CircleProgressView
+        android:id="@+id/circle_view"
+        style="@style/circleview_style"
+        android:layout_width="277dp"
+        android:layout_height="277dp"
+        android:visibility="gone"
+        CircleProgressView:barColor="#00796B"
+        CircleProgressView:barWidth="35dp"
+        CircleProgressView:contourSize="0dp"
+        CircleProgressView:maxValue="20"
+        CircleProgressView:rimColor="#B2DFDB"
+        CircleProgressView:rimWidth="35dp"
+        CircleProgressView:seekMode="true"
+        CircleProgressView:textColor="#00796B"
+        CircleProgressView:unit="%"
+        CircleProgressView:unitColor="#009688" />
+
+</RelativeLayout>
+

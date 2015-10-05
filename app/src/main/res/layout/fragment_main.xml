@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".MainActivityFragment">
+
+    <GridView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/poster_gridview"
+        style="@style/gridview_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/nodata_image"
+        style="@style/nodata_image_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <at.grabner.circleprogress.CircleProgressView
+        android:id="@+id/circle_view"
+        style="@style/circleview_style"
+        android:layout_width="277dp"
+        android:layout_height="277dp"
+        android:visibility="gone"
+        CircleProgressView:barColor="#00796B"
+        CircleProgressView:barWidth="35dp"
+        CircleProgressView:contourSize="0dp"
+        CircleProgressView:maxValue="20"
+        CircleProgressView:rimColor="#B2DFDB"
+        CircleProgressView:rimWidth="35dp"
+        CircleProgressView:seekMode="true"
+        CircleProgressView:textColor="#00796B"
+        CircleProgressView:unit="%"
+        CircleProgressView:unitColor="#009688" />
+
+    <TextView
+        android:id="@+id/nodata_text"
+        style="@style/nodata_text_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>

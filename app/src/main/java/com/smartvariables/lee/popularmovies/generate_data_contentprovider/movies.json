@@ -1,0 +1,68 @@
+{
+  "documentation": "information about a movie.",
+  "fields": [
+    {
+      "documentation": "tmdb movie ID",
+      "name": "field_tmdb_movie_id",
+      "type": "Integer",
+      "nullable": true
+    },
+    {
+      "documentation": "the movie title",
+      "name": "field_movie_title",
+      "type": "String",
+      "nullable": false
+    },
+    {
+      "documentation": "path to the movie poster",
+      "name": "field_movie_poster_path",
+      "type": "String",
+      "nullable": true,
+      "defaultValue": ""
+    },
+    {
+      "documentation": "the movie poster",
+      "name": "field_movie_poster",
+      "type": "byte[]",
+      "nullable": true
+    },
+    {
+      "documentation": "movie popularity 0-10",
+      "name": "field_movie_popularity",
+      "type": "Integer",
+      "nullable": true
+    },
+    {
+      "documentation": "movie vote average 0-10",
+      "name": "field_movie_vote_average",
+      "type": "Integer",
+      "nullable": true
+    },
+    {
+      "documentation": "movie vote count",
+      "name": "field_movie_vote_count",
+      "type": "Integer",
+      "nullable": false,
+      "defaultValue": "0"
+    },
+    {
+      "documentation": "movie release date",
+      "name": "field_movie_release_date",
+      "type": "Date",
+      "nullable": true
+    },
+    {
+      "documentation": "the movie overview",
+      "name": "field_movie_overview",
+      "type": "String",
+      "nullable": true,
+      "defaultValue": ""
+    }
+  ],
+  "constraints": [
+    {
+      "name": "field_movie_title",
+      "definition": "UNIQUE (field_movie_title) ON CONFLICT ABORT"
+    }
+  ]
+}

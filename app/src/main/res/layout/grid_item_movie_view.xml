@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/transparent_style"
+    android:background="@drawable/touch_selector"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="0dp"
+    android:orientation="vertical"
+    android:padding="0dp">
+
+    <RelativeLayout
+        android:id="@+id/poster_layout"
+        style="@style/transparent_style"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <com.smartvariables.lee.popularmovies.util.NotifyImageView
+            android:id="@+id/poster_image"
+            style="@style/poster_image_style"
+            android:layout_width="match_parent"
+            android:scaleType="fitCenter"
+            android:layout_height="191dp" />
+
+        <ImageView
+            android:id="@+id/no_poster_image"
+            style="@style/poster_image_style"
+            android:src="@drawable/noimage"
+            android:layout_width="match_parent"
+            android:layout_height="191dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/missing_art"
+            style="@style/missing_art_style"
+            android:layout_width="137dp"
+            android:layout_height="186dp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/center_rating_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fillViewport="true"
+                android:gravity="top"
+                android:numStars="5"
+                android:progressBackgroundTint="@android:color/transparent"
+                android:textColor="@android:color/holo_red_light" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/poster_layout_footer"
+        style="@style/transparent_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/poster_layout">
+
+        <TextView
+            android:id="@+id/movie_title"
+            style="@style/movie_title_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</LinearLayout>

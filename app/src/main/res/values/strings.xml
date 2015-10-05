@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Popular Movies, Stage 2</string>
+    <string name="attribute_tmdb">This product uses the TMDb API but is not endorsed or certified by TMDb. - see www.themoviedb.org</string>
+    <string name="attribute_themoviedbapi">This product uses the \'themoviedbapi\' library from: https://github.com/holgerbrandl/themoviedbapi/ </string>
+    <string name="loading">Loading Movies..</string>
+    <string name="title_activity_movie_details">Movie Details</string>
+    <string name="sort_by">Sort By:</string>
+    <string name="pref_allcached">All Cached</string>
+    <string name="sort_allcached">allcached.asc"</string>
+    <string name="pref_favorites">Marked Favorites</string>
+    <string name="sort_favorites">favorites.desc"</string>
+    <string name="pref_popular">Most Popular</string>
+    <string name="sort_popular">popularity.desc"</string>
+    <string name="pref_rated">Highest Rated</string>
+    <string name="sort_rated">vote_average.desc</string>
+    <string name="pref_release">Future Releases</string>
+    <string name="sort_release">release_date.desc</string>
+    <string name="offline">You are offline!</string>
+    <string name="nodata">NOTHING\nFOUND!</string>
+    <string name="no_internet">\nThe %s app\nrequires Internet connectivity.\nWi-Fi and mobile data are off.\n\nNo Internet connection found.\n</string>
+    <string name="airplane_mode">\nThe %s app\nrequires Internet connectivity.\nAirplane mode is currently on.\n\nNo Internet connection found.\n</string>
+    <string name="connect">Connect</string>
+    <string name="airplane">Airplane Mode</string>
+    <string name="ok">Ok</string>
+    <string name="action_share">Share</string>
+    <string name="check_out">Hey, check out this movie I found while using the app </string>
+    <string name="release_head"><h5>Release Date:</h5></string>
+    <string name="overview_head"><h5>Overview:</h5></string>
+    <string name="trailer_head"><h5>Trailer Links:</h5></string>
+    <string name="search_reviews">Searching for Reviews..</string>
+    <string name="favorite">Favorite Movie!</string>
+    <string name="not_favorite">Not a Favorite.</string>
+</resources>

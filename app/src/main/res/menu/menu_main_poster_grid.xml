@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/pref_allcached"
+        android:icon="@drawable/sort_icon"
+        android:title="@string/pref_allcached" />
+    <item
+        android:id="@+id/pref_favorites"
+        android:icon="@drawable/sort_icon"
+        android:title="@string/pref_favorites" />
+    <item
+        android:id="@+id/pref_popular"
+        android:icon="@drawable/sort_icon"
+        android:title="@string/pref_popular" />
+
+    <item
+        android:id="@+id/pref_rated"
+        android:icon="@drawable/sort_icon"
+        android:title="@string/pref_rated" />
+<!--
+everthing works.  uncomment here and in MainActivityFragment.java (onOptionsItemSelected) to include Future Releases.
+
+    <item
+        android:id="@+id/pref_release"
+        android:icon="@drawable/sort_icon"
+        android:title="@string/pref_release" />
+-->
+
+</menu>

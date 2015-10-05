@@ -1,0 +1,15 @@
+<resources>
+
+    <style name="movielist_style" >
+        <!-- used to set choiceMode to "singleChoice" for tablets -->
+        <item name="android:choiceMode">singleChoice</item>
+    </style>
+
+    <style name="floating_action_style" >
+        <item name="android:layout_margin">19dp</item>
+        <item name="android:padding">23dp</item>
+        <item name="android:alpha">0.7</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+</resources>

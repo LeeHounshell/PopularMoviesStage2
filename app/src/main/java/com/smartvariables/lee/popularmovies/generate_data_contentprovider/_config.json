@@ -1,0 +1,13 @@
+{
+  "syntaxVersion": 3,
+  "projectPackageId": "com.smartvariables.lee.popularmovies",
+  "authority": "com.smartvariables.lee.popularmovies.data.popularmoviesprovider",
+  "providerJavaPackage": "com.smartvariables.lee.popularmovies.data",
+  "providerClassName": "PopularMoviesProvider",
+  "sqliteOpenHelperClassName": "MovieDbHelper",
+  "sqliteOpenHelperCallbacksClassName": "MovieDbHelperCallbacks",
+  "databaseFileName": "movies.db",
+  "databaseVersion": 1,
+  "enableForeignKeys": true,
+  "useAnnotations": true
+}

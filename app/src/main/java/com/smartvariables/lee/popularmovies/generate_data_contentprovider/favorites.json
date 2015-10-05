@@ -1,0 +1,14 @@
+{
+  "documentation": "movie favorites.",
+  "fields": [
+    {
+      "name": "field_movie_id",
+      "type": "Long",
+      "nullable": false,
+      "foreignKey": {
+        "table": "movies",
+        "onDelete": "CASCADE"
+      }
+    }
+  ],
+}

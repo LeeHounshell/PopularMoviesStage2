@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+        <style name="rating_bar_style">
+                <item name="android:gravity">top</item>
+                <item name="android:layout_gravity">center</item>
+                <item name="android:fillViewport">true</item>
+                <item name="android:numStars">5</item>
+                <item name="android:progressBackgroundTint">@android:color/transparent</item>
+                <item name="android:textColor">@android:color/holo_red_light</item>
+        </style>
+
+        <style name="detail_title_style">
+                <item name="android:layout_columnWeight">1</item>
+                <item name="android:layout_weight">1</item>
+                <item name="android:fontFamily">sans-serif-medium</item>
+                <item name="android:gravity">center</item>
+                <item name="android:textColor">@android:color/white</item>
+                <item name="android:textSize">19sp</item>
+                <item name="android:textStyle">bold</item>
+        </style>
+
+</resources>
