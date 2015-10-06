@@ -11,7 +11,7 @@ This app provides ability to discover Popular and Highly-Rated movies.
 All movies and associated images, trailers, and reviews are cached
 locally in SQLite.  The database uses a Content Provider generator.
 To alter the database strucutre, edit the JSON configs and re-run the
-generation script located under util/generate_data_contentprovider.
+generation script located under generate_data_contentprovider.
 This will build a new 'data' directory with code to manage the database.
 When the app is launched, it will fetch, store and display relevant movie data.
 The local database caches forever, and there is no option to clear it
@@ -48,5 +48,5 @@ You need to provide your own API key in order to run the app.  Place your API ke
 This work is Copyright 2015 Lee Hounshell, and 
 is licensed under a Creative Commons Attribution-NonCommercial 3.0 
 Unported License. See http://creativecommons.org/licenses/by-nc/3.0 for
-a license details.
+the license details.
 
