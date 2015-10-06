@@ -10,12 +10,14 @@ And this is the Popular Movies, Stage2 assignment.
 This app provides ability to discover Popular and Highly-Rated movies.
 All movies and associated images, trailers, and reviews are cached
 locally in SQLite.  The database uses a Content Provider generator.
-To alter the database strucutre, edit the JSON configs and re-run the
+To alter the database structure, edit the JSON configs and re-run the
 generation script located under generate_data_contentprovider.
 This will build a new 'data' directory with code to manage the database.
 When the app is launched, it will fetch, store and display relevant movie data.
 The local database caches forever, and there is no option to clear it
 (other than reinstalling the app).
+
+This *Popular Movies, Stage 2* app was evaluated by a certified Udacity code reviewer and graded "Exceeds Specifications."
 
 
 ## Features
