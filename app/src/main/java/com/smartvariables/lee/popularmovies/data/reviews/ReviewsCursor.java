@@ -11,14 +11,14 @@
 //
 package com.smartvariables.lee.popularmovies.data.reviews;
 
+import java.util.Date;
+
 import android.database.Cursor;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.smartvariables.lee.popularmovies.data.base.AbstractCursor;
-import com.smartvariables.lee.popularmovies.data.movies.MoviesColumns;
-
-import java.util.Date;
+import com.smartvariables.lee.popularmovies.data.movies.*;
 
 /**
  * Cursor wrapper for the {@code reviews} table.

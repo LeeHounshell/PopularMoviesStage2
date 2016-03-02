@@ -11,9 +11,12 @@
 //
 package com.smartvariables.lee.popularmovies.data.trailers;
 
-import android.support.annotation.NonNull;
-
 import com.smartvariables.lee.popularmovies.data.base.BaseModel;
+
+import java.util.Date;
+
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 
 /**
  * movie trailers. each movie may have 0-n trailers.

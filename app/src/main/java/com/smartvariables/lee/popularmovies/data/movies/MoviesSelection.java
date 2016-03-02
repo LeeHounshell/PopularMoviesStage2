@@ -11,14 +11,14 @@
 //
 package com.smartvariables.lee.popularmovies.data.movies;
 
-import android.content.ContentResolver;
+import java.util.Date;
+
 import android.content.Context;
+import android.content.ContentResolver;
 import android.database.Cursor;
 import android.net.Uri;
 
 import com.smartvariables.lee.popularmovies.data.base.AbstractSelection;
-
-import java.util.Date;
 
 /**
  * Selection for the {@code movies} table.
@@ -33,7 +33,7 @@ public class MoviesSelection extends AbstractSelection<MoviesSelection> {
      * Query the given content resolver using this selection.
      *
      * @param contentResolver The content resolver to query.
-     * @param projection      A list of which columns to return. Passing null will return all columns, which is inefficient.
+     * @param projection A list of which columns to return. Passing null will return all columns, which is inefficient.
      * @return A {@code MoviesCursor} object, which is positioned before the first entry, or null.
      */
     public MoviesCursor query(ContentResolver contentResolver, String[] projection) {
@@ -52,7 +52,7 @@ public class MoviesSelection extends AbstractSelection<MoviesSelection> {
     /**
      * Query the given content resolver using this selection.
      *
-     * @param context    The context to use for the query.
+     * @param context The context to use for the query.
      * @param projection A list of which columns to return. Passing null will return all columns, which is inefficient.
      * @return A {@code MoviesCursor} object, which is positioned before the first entry, or null.
      */

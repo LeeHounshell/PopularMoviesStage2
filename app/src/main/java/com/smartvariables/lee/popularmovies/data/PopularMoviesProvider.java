@@ -11,11 +11,14 @@
 //
 package com.smartvariables.lee.popularmovies.data;
 
+import java.util.Arrays;
+
 import android.content.ContentValues;
 import android.content.UriMatcher;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.smartvariables.lee.popularmovies.BuildConfig;
@@ -24,8 +27,6 @@ import com.smartvariables.lee.popularmovies.data.favorites.FavoritesColumns;
 import com.smartvariables.lee.popularmovies.data.movies.MoviesColumns;
 import com.smartvariables.lee.popularmovies.data.reviews.ReviewsColumns;
 import com.smartvariables.lee.popularmovies.data.trailers.TrailersColumns;
-
-import java.util.Arrays;
 
 public class PopularMoviesProvider extends BaseContentProvider {
     private static final String TAG = PopularMoviesProvider.class.getSimpleName();
@@ -49,6 +50,7 @@ public class PopularMoviesProvider extends BaseContentProvider {
 
     private static final int URI_TYPE_TRAILERS = 6;
     private static final int URI_TYPE_TRAILERS_ID = 7;
+
 
 
     private static final UriMatcher URI_MATCHER = new UriMatcher(UriMatcher.NO_MATCH);
@@ -116,15 +118,13 @@ public class PopularMoviesProvider extends BaseContentProvider {
 
     @Override
     public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
-        if (DEBUG)
-            Log.d(TAG, "update uri=" + uri + " values=" + values + " selection=" + selection + " selectionArgs=" + Arrays.toString(selectionArgs));
+        if (DEBUG) Log.d(TAG, "update uri=" + uri + " values=" + values + " selection=" + selection + " selectionArgs=" + Arrays.toString(selectionArgs));
         return super.update(uri, values, selection, selectionArgs);
     }
 
     @Override
     public int delete(Uri uri, String selection, String[] selectionArgs) {
-        if (DEBUG)
-            Log.d(TAG, "delete uri=" + uri + " selection=" + selection + " selectionArgs=" + Arrays.toString(selectionArgs));
+        if (DEBUG) Log.d(TAG, "delete uri=" + uri + " selection=" + selection + " selectionArgs=" + Arrays.toString(selectionArgs));
         return super.delete(uri, selection, selectionArgs);
     }
 

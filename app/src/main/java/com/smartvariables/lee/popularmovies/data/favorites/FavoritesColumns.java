@@ -15,7 +15,10 @@ import android.net.Uri;
 import android.provider.BaseColumns;
 
 import com.smartvariables.lee.popularmovies.data.PopularMoviesProvider;
+import com.smartvariables.lee.popularmovies.data.favorites.FavoritesColumns;
 import com.smartvariables.lee.popularmovies.data.movies.MoviesColumns;
+import com.smartvariables.lee.popularmovies.data.reviews.ReviewsColumns;
+import com.smartvariables.lee.popularmovies.data.trailers.TrailersColumns;
 
 /**
  * movie favorites.
@@ -32,10 +35,10 @@ public class FavoritesColumns implements BaseColumns {
     public static final String FIELD_MOVIE_ID = "field_movie_id";
 
 
-    public static final String DEFAULT_ORDER = TABLE_NAME + "." + _ID;
+    public static final String DEFAULT_ORDER = TABLE_NAME + "." +_ID;
 
     // @formatter:off
-    public static final String[] ALL_COLUMNS = new String[]{
+    public static final String[] ALL_COLUMNS = new String[] {
             _ID,
             FIELD_MOVIE_ID
     };

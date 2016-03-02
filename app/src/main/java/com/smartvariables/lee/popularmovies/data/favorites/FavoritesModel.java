@@ -13,6 +13,11 @@ package com.smartvariables.lee.popularmovies.data.favorites;
 
 import com.smartvariables.lee.popularmovies.data.base.BaseModel;
 
+import java.util.Date;
+
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+
 /**
  * movie favorites.
  */

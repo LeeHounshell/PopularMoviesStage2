@@ -11,6 +11,10 @@
 //
 package com.smartvariables.lee.popularmovies.data.base;
 
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.HashSet;
+
 import android.content.ContentProvider;
 import android.content.ContentProviderOperation;
 import android.content.ContentProviderResult;
@@ -21,11 +25,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.provider.BaseColumns;
+import android.support.annotation.NonNull;
 import android.util.Log;
-
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.HashSet;
 
 public abstract class BaseContentProvider extends ContentProvider {
     public static final String QUERY_NOTIFY = "QUERY_NOTIFY";
@@ -43,7 +44,6 @@ public abstract class BaseContentProvider extends ContentProvider {
 
 
     protected abstract QueryParams getQueryParams(Uri uri, String selection, String[] projection);
-
     protected abstract boolean hasDebug();
 
     protected abstract SQLiteOpenHelper createSqLiteOpenHelper();
@@ -65,8 +65,7 @@ public abstract class BaseContentProvider extends ContentProvider {
                 // field.setAccessible(true);
                 // field.set(null, true);
             } catch (Throwable t) {
-                if (hasDebug())
-                    Log.w(getClass().getSimpleName(), "Could not enable SQLiteDebug logging", t);
+                if (hasDebug()) Log.w(getClass().getSimpleName(), "Could not enable SQLiteDebug logging", t);
             }
         }
         mSqLiteOpenHelper = createSqLiteOpenHelper();

@@ -13,13 +13,14 @@ package com.smartvariables.lee.popularmovies.data;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
+
 import android.util.Log;
 
 import com.smartvariables.lee.popularmovies.BuildConfig;
 
 /**
  * Implement your custom database creation or upgrade code here.
- * <p/>
+ *
  * This file will not be overwritten if you re-run the content provider generator.
  */
 public class MovieDbHelperCallbacks {
@@ -41,8 +42,7 @@ public class MovieDbHelperCallbacks {
     }
 
     public void onUpgrade(final Context context, final SQLiteDatabase db, final int oldVersion, final int newVersion) {
-        if (BuildConfig.DEBUG)
-            Log.d(TAG, "Upgrading database from version " + oldVersion + " to " + newVersion);
+        if (BuildConfig.DEBUG) Log.d(TAG, "Upgrading database from version " + oldVersion + " to " + newVersion);
         // Insert your upgrading code here.
     }
 }

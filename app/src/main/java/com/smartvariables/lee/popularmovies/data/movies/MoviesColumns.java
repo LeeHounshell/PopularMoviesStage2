@@ -15,6 +15,10 @@ import android.net.Uri;
 import android.provider.BaseColumns;
 
 import com.smartvariables.lee.popularmovies.data.PopularMoviesProvider;
+import com.smartvariables.lee.popularmovies.data.favorites.FavoritesColumns;
+import com.smartvariables.lee.popularmovies.data.movies.MoviesColumns;
+import com.smartvariables.lee.popularmovies.data.reviews.ReviewsColumns;
+import com.smartvariables.lee.popularmovies.data.trailers.TrailersColumns;
 
 /**
  * information about a movie.
@@ -74,10 +78,10 @@ public class MoviesColumns implements BaseColumns {
     public static final String FIELD_MOVIE_OVERVIEW = "field_movie_overview";
 
 
-    public static final String DEFAULT_ORDER = TABLE_NAME + "." + _ID;
+    public static final String DEFAULT_ORDER = TABLE_NAME + "." +_ID;
 
     // @formatter:off
-    public static final String[] ALL_COLUMNS = new String[]{
+    public static final String[] ALL_COLUMNS = new String[] {
             _ID,
             FIELD_TMDB_MOVIE_ID,
             FIELD_MOVIE_TITLE,
@@ -96,19 +100,13 @@ public class MoviesColumns implements BaseColumns {
         for (String c : projection) {
             if (c.equals(FIELD_TMDB_MOVIE_ID) || c.contains("." + FIELD_TMDB_MOVIE_ID)) return true;
             if (c.equals(FIELD_MOVIE_TITLE) || c.contains("." + FIELD_MOVIE_TITLE)) return true;
-            if (c.equals(FIELD_MOVIE_POSTER_PATH) || c.contains("." + FIELD_MOVIE_POSTER_PATH))
-                return true;
+            if (c.equals(FIELD_MOVIE_POSTER_PATH) || c.contains("." + FIELD_MOVIE_POSTER_PATH)) return true;
             if (c.equals(FIELD_MOVIE_POSTER) || c.contains("." + FIELD_MOVIE_POSTER)) return true;
-            if (c.equals(FIELD_MOVIE_POPULARITY) || c.contains("." + FIELD_MOVIE_POPULARITY))
-                return true;
-            if (c.equals(FIELD_MOVIE_VOTE_AVERAGE) || c.contains("." + FIELD_MOVIE_VOTE_AVERAGE))
-                return true;
-            if (c.equals(FIELD_MOVIE_VOTE_COUNT) || c.contains("." + FIELD_MOVIE_VOTE_COUNT))
-                return true;
-            if (c.equals(FIELD_MOVIE_RELEASE_DATE) || c.contains("." + FIELD_MOVIE_RELEASE_DATE))
-                return true;
-            if (c.equals(FIELD_MOVIE_OVERVIEW) || c.contains("." + FIELD_MOVIE_OVERVIEW))
-                return true;
+            if (c.equals(FIELD_MOVIE_POPULARITY) || c.contains("." + FIELD_MOVIE_POPULARITY)) return true;
+            if (c.equals(FIELD_MOVIE_VOTE_AVERAGE) || c.contains("." + FIELD_MOVIE_VOTE_AVERAGE)) return true;
+            if (c.equals(FIELD_MOVIE_VOTE_COUNT) || c.contains("." + FIELD_MOVIE_VOTE_COUNT)) return true;
+            if (c.equals(FIELD_MOVIE_RELEASE_DATE) || c.contains("." + FIELD_MOVIE_RELEASE_DATE)) return true;
+            if (c.equals(FIELD_MOVIE_OVERVIEW) || c.contains("." + FIELD_MOVIE_OVERVIEW)) return true;
         }
         return false;
     }
