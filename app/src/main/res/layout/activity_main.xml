@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/movie_list"
     style="@style/movielist_style"
-    android:name="com.smartvariables.lee.popularmovies.MainActivityFragment"
+    android:name="com.smartvariables.lee.popularmovies2.MainActivityFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:layout="@layout/fragment_main" />

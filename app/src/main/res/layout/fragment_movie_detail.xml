@@ -153,7 +153,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="1dp" />
 
-                    <com.smartvariables.lee.popularmovies.util.NotifyImageView
+                    <com.smartvariables.lee.popularmovies2.util.NotifyImageView
                         android:id="@+id/poster_image"
                         style="@style/poster_image_style"
                         android:layout_width="fill_parent"

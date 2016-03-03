@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/movie_list"
         style="@style/movielist_style"
-        android:name="com.smartvariables.lee.popularmovies.MainActivityFragment"
+        android:name="com.smartvariables.lee.popularmovies2.MainActivityFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"

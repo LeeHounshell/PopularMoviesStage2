@@ -6,7 +6,7 @@ android {
     compileOptions.encoding = 'ISO-8859-1'
 
     defaultConfig {
-        applicationId "com.smartvariables.lee.popularmovies"
+        applicationId "com.smartvariables.lee.popularmovies2"
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 1
