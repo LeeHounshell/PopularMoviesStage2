@@ -7,8 +7,6 @@ import android.util.Log;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 
-import com.smartvariables.lee.popularmovies2.MovieViewHolder;
-
 public class NotifyImageView extends ImageView {
     private final static String TAG = "LEE: <" + NotifyImageView.class.getSimpleName() + ">";
 
@@ -86,7 +84,7 @@ public class NotifyImageView extends ImageView {
         mImageChanged = false;
     }
 
-    public void notifyOn(MovieViewHolder holder) {
+    public void notifyOn(NotifyImageHolder holder) {
         Log.v(TAG, "notifyOn");
         init();
         mHolder = holder;
